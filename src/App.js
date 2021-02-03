@@ -1,10 +1,9 @@
-function App() {
-  return (
-    <div className="d-flex justify-content-between">
-      <h1>Hello</h1>
-      <h1>World</h1>
-    </div>
-  );
-}
+import Header from './components/Header';
+
+const App = () => (
+  <div className="d-flex justify-content-center">
+    <Header />
+  </div>
+);
 
 export default App;
