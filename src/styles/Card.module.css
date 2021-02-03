@@ -8,10 +8,12 @@
   height: 350px;
   align-items: flex-start;
   background-color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .product_name {
   margin: 0;
+  font-weight: bold;
   font-size: 1.8rem;
 }
 
@@ -47,12 +49,10 @@
 .weight_amount {
   font-size: 2rem;
   color: white;
-  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 }
 
 .weight_degree {
   color: white;
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
 }
