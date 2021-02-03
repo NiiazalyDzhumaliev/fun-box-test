@@ -4,11 +4,23 @@
   justify-content: space-between;
   border: 3px solid #36b5d1;
   border-radius: 10px;
-  width: 250px;
-  height: 350px;
-  align-items: flex-start;
+  width: 270px;
+  height: 400px;
   background-color: white;
   font-family: 'Montserrat', sans-serif;
+}
+
+.description_container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.product_description {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: gray;
 }
 
 .product_name {
@@ -19,7 +31,8 @@
 
 .ingredient {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .cat_image {
