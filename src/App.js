@@ -1,7 +1,10 @@
-import './App.css';
-
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="d-flex justify-content-between">
+      <h1>Hello</h1>
+      <h1>World</h1>
+    </div>
+  );
 }
 
 export default App;
