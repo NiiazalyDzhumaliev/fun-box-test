@@ -9,6 +9,7 @@
   height: 400px;
   background-color: white;
   font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
 }
 
 .description_container {
