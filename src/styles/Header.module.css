@@ -1,4 +1,9 @@
-.main_header {
+.header_container {
+  display: flex;
+  justify-content: center;
+}
+
+.header_text {
   padding-top: 50px;
   padding-bottom: 25px;
   font-size: 2rem;
