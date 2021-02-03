@@ -5,3 +5,8 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.card_container {
+  display: flex;
+  justify-content: center;
+}

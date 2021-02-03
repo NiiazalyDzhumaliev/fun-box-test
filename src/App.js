@@ -5,7 +5,7 @@ import style from './styles/App.module.css';
 const App = () => (
   <div className={style.App}>
     <Header />
-    <div className="d-flex justify-content-around">
+    <div className={style.card_container}>
       <Card />
       <Card />
       <Card />
