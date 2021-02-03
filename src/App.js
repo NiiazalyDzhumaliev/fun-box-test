@@ -1,9 +1,11 @@
 import Header from './components/Header';
+import Card from './components/Card';
 import style from './styles/App.module.css';
 
 const App = () => (
-  <div className={`${style.App} d-flex justify-content-center`}>
+  <div className={`${style.App} d-flex flex-column align-items-center`}>
     <Header />
+    <Card />
   </div>
 );
 

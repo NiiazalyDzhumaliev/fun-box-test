@@ -1,0 +1,13 @@
+.card_item {
+  width: 320px;
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  background-color: white;
+}
+
+.cat_image {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
