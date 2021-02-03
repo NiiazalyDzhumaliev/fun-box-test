@@ -49,18 +49,23 @@
 }
 
 .cat_image {
-  width: 150px;
-  height: 200px;
+  width: 170px;
+  height: 220px;
   object-fit: cover;
 }
 
 .image_container {
   display: flex;
   align-items: flex-end;
+  position: relative;
 }
 
 .weight {
   display: flex;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
