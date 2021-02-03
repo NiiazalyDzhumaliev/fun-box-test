@@ -1,5 +1,5 @@
 import React from 'react';
-import cat from '../images/cat.png';
+import cat from '../images/cat1.png';
 import style from '../styles/Card.module.css';
 
 const Card = () => (
