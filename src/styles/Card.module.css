@@ -1,6 +1,6 @@
 .card_item {
   display: flex;
-  border: 3px solid #4d7298;
+  border: 3px solid #36b5d1;
   border-radius: 10px;
   width: 250px;
   height: 350px;
@@ -19,9 +19,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #4d7298;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
+  background-color: #36b5d1;
+  opacity: 0.8;
   line-height: 1;
+}
+
+.weight_amount {
+  font-size: 2rem;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.weight_degree {
+  color: white;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
