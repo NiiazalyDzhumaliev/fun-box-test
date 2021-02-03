@@ -10,12 +10,12 @@ const Card = () => (
         <h1 className={style.product_name}>Нямушка</h1>
         <h3 className={style.ingredient}>с фуа-гра</h3>
         <p className={style.product_amount}>
-          <span>10</span>
+          <span className={style.amount}>10</span>
           {' '}
           порций
         </p>
         <p className={style.product_amount}>
-          <span>1</span>
+          <span className={style.amount}>1</span>
           {' '}
           мышь в подарок
         </p>

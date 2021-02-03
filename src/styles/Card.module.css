@@ -30,11 +30,15 @@
   color: gray;
 }
 
+.amount {
+  font-weight: bold;
+}
+
 .product_name {
   margin: 0;
   font-family: 'Nunito', sans-serif;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 .ingredient {
