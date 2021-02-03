@@ -9,11 +9,15 @@ const Card = () => (
         <p className={style.product_description}>Сказочное заморское яство</p>
         <h1 className={style.product_name}>Нямушка</h1>
         <h3 className={style.ingredient}>с фуа-гра</h3>
-        <p className="m-0">
-          <span>10</span> порций
+        <p className={style.product_amount}>
+          <span>10</span>
+          {' '}
+          порций
         </p>
-        <p className="m-0">
-          <span>1</span> мышь в подарок
+        <p className={style.product_amount}>
+          <span>1</span>
+          {' '}
+          мышь в подарок
         </p>
       </div>
       <div className={style.image_container}>
