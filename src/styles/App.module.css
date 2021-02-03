@@ -1,9 +1,9 @@
 .App {
-  height: 100vh;
-  background-image: url('../images/wp2632430-black-background-hd.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url('../images/wp2632430-black-background-hd.jpg') no-repeat
+    center center fixed;
   background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
 
 .card_container {
