@@ -12,6 +12,10 @@ const Card = props => {
     handleMouseLeave,
     mouseLeft,
     firstSelect,
+    ingredient,
+    portions,
+    mice,
+    clientSat,
   } = props;
 
   const borderStyle = clicked
@@ -48,16 +52,27 @@ const Card = props => {
       <div className={style.description_container}>
         <p className={style.product_description}>Сказочное заморское яство</p>
         <h1 className={style.product_name}>Нямушка</h1>
-        <h3 className={style.ingredient}>с фуа-гра</h3>
+        <h3 className={style.ingredient}>
+          с
+          {ingredient}
+        </h3>
         <p className={style.product_amount}>
-          <span className={style.amount}>10</span>
+          <span className={style.amount}>{portions}</span>
           {' '}
           порций
         </p>
         <p className={style.product_amount}>
-          <span className={style.amount}>1</span>
+          <span className={style.amount}>{mice}</span>
           {' '}
           мышь в подарок
+        </p>
+        <p className={style.product_amount}>
+          <span className={style.amount}>{mice}</span>
+          {' '}
+          мышь в подарок
+        </p>
+        <p className={style.product_amount}>
+          <span className={style.amount}>{clientSat}</span>
         </p>
       </div>
       <div className={style.image_container}>
@@ -86,6 +101,10 @@ Card.propTypes = {
   mouseEntered: PropTypes.bool.isRequired,
   mouseLeft: PropTypes.bool.isRequired,
   firstSelect: PropTypes.bool.isRequired,
+  ingredient: PropTypes.string.isRequired,
+  portions: PropTypes.string.isRequired,
+  mice: PropTypes.string.isRequired,
+  clientSat: PropTypes.string.isRequired,
 };
 
 export default Card;
