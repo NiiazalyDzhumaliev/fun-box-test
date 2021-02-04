@@ -15,19 +15,19 @@ const Card = props => {
   } = props;
 
   const borderStyle = clicked
-    ? { border: '3.5px solid #de43b4' }
+    ? { border: '3.5px solid #e81c6a' }
     : { border: '3.5px solid #36b5d1' };
 
   const borderHoverStyle = {
-    border: '3.5px solid #f582ae',
+    border: '3.5px solid #eb367a',
   };
 
   const labelHoverStyle = {
-    backgroundColor: '#f582ae',
+    backgroundColor: '#eb367a',
   };
 
   const labelStyle = clicked
-    ? { backgroundColor: '#de43b4' }
+    ? { backgroundColor: '#e81c6a' }
     : { backgroundColor: '#36b5d1' };
 
   return (
