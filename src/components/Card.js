@@ -4,14 +4,14 @@ import cat from '../images/cat1.png';
 import style from '../styles/Card.module.css';
 
 const Card = props => {
-  const { clicked, borderColor, handleClick } = props;
+  const { clicked, handleClick } = props;
 
   const borderStyle = clicked
-    ? { border: `3.5px solid ${borderColor}` }
+    ? { border: '3.5px solid #de43b4' }
     : { border: '3.5px solid #36b5d1' };
 
   const labelStyle = clicked
-    ? { backgroundColor: `${borderColor}` }
+    ? { backgroundColor: '#de43b4' }
     : { backgroundColor: '#36b5d1' };
 
   return (
@@ -51,7 +51,6 @@ const Card = props => {
 
 Card.propTypes = {
   clicked: PropTypes.bool.isRequired,
-  borderColor: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
 };
 
