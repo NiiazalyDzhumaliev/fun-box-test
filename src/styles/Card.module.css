@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 3px solid #36b5d1;
   border-radius: 10px;
   padding-left: 0;
   width: 270px;
@@ -10,6 +9,10 @@
   background-color: white;
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
+}
+
+.card_item:focus {
+  outline: none;
 }
 
 @media screen and (min-width: 992px) {
@@ -79,7 +82,6 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #36b5d1;
   opacity: 0.8;
   line-height: 1;
 }
