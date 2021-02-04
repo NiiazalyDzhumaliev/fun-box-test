@@ -52,10 +52,7 @@ const Card = props => {
       <div className={style.description_container}>
         <p className={style.product_description}>Сказочное заморское яство</p>
         <h1 className={style.product_name}>Нямушка</h1>
-        <h3 className={style.ingredient}>
-          с
-          {ingredient}
-        </h3>
+        <h3 className={style.ingredient}>{ingredient}</h3>
         <p className={style.product_amount}>
           <span className={style.amount}>{portions}</span>
           {' '}

@@ -14,7 +14,7 @@ const App = () => {
   const cardInfo = [
     {
       id: uuid(),
-      ingredient: 'фуа-гра',
+      ingredient: 'c фуа-гра',
       portions: '10',
       mice: '',
       clientSat: '',
@@ -22,14 +22,14 @@ const App = () => {
 
     {
       id: uuid(),
-      ingredient: 'рыбой',
+      ingredient: 'c рыбой',
       portions: '40',
       mice: '2',
       clientSat: '',
     },
     {
       id: uuid(),
-      ingredient: 'курой',
+      ingredient: 'c курой',
       portions: '100',
       mice: '5',
       clientSat: 'заказчик доволен',
