@@ -37,7 +37,12 @@ const Card = props => {
         border: '3.5px solid #e81c6a',
       };
     }
-    return { border: '3.5px solid #36b5d1' };
+    if (!card.clicked && card.mouseEntered) {
+      return {
+        border: '3.5px solid #36b5d1',
+      };
+    }
+    return { border: '3.5px solid #339eb5' };
   };
 
   const styleLabel = card => {
@@ -51,11 +56,15 @@ const Card = props => {
         backgroundColor: '#eb367a',
       };
     }
-
-    if (cardObject.clicked) {
+    if (card.clicked) {
       return { backgroundColor: '#e81c6a' };
     }
-    return { backgroundColor: '#36b5d1' };
+    if (!card.clicked && card.mouseEntered) {
+      return {
+        backgroundColor: '#36b5d1',
+      };
+    }
+    return { backgroundColor: '#339eb5' };
   };
 
   return (
