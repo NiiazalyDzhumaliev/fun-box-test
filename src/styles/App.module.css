@@ -1,6 +1,5 @@
 .App {
-  background:
-    url('../images/wp2632430-black-background-hd.jpg') no-repeat
+  background: url('../images/wp2632430-black-background-hd.jpg') no-repeat
     center center fixed;
   background-size: cover;
   height: 100%;
@@ -11,9 +10,4 @@
   .App {
     height: 100vh;
   }
-}
-
-.card_container {
-  display: flex;
-  justify-content: center;
 }

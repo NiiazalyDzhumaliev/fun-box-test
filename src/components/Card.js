@@ -5,20 +5,10 @@ import style from '../styles/Card.module.css';
 
 const Card = props => {
   const {
-    clicked,
-    handleMouseEnter,
-    handleClick,
-    mouseEntered,
-    handleMouseLeave,
-    mouseLeft,
-    firstSelect,
-    ingredient,
-    portions,
-    mice,
-    clientSat,
+    handleMouseEnter, handleClick, handleMouseLeave, cardObject,
   } = props;
 
-  const borderStyle = clicked
+  const borderStyle = cardObject.clicked
     ? { border: '3.5px solid #e81c6a' }
     : { border: '3.5px solid #36b5d1' };
 
@@ -30,7 +20,7 @@ const Card = props => {
     backgroundColor: '#eb367a',
   };
 
-  const labelStyle = clicked
+  const labelStyle = cardObject.clicked
     ? { backgroundColor: '#e81c6a' }
     : { backgroundColor: '#36b5d1' };
 
@@ -38,7 +28,10 @@ const Card = props => {
     <div
       className={`${style.card_item}`}
       style={
-        clicked && mouseEntered && !mouseLeft && !firstSelect
+        cardObject.clicked
+        && cardObject.mouseEntered
+        && !cardObject.mouseLeft
+        && !cardObject.firstSelect
           ? borderHoverStyle
           : borderStyle
       }
@@ -52,24 +45,24 @@ const Card = props => {
       <div className={style.description_container}>
         <p className={style.product_description}>Сказочное заморское яство</p>
         <h1 className={style.product_name}>Нямушка</h1>
-        <h3 className={style.ingredient}>{ingredient}</h3>
+        <h3 className={style.ingredient}>{cardObject.ingredient}</h3>
         <p className={style.product_amount}>
-          <span className={style.amount}>{portions}</span>
+          <span className={style.amount}>{cardObject.portions}</span>
           {' '}
           порций
         </p>
         <p className={style.product_amount}>
-          <span className={style.amount}>{mice}</span>
+          <span className={style.amount}>{cardObject.mice}</span>
           {' '}
           мышь в подарок
         </p>
         <p className={style.product_amount}>
-          <span className={style.amount}>{mice}</span>
+          <span className={style.amount}>{cardObject.mice}</span>
           {' '}
           мышь в подарок
         </p>
         <p className={style.product_amount}>
-          <span className={style.amount}>{clientSat}</span>
+          <span className={style.amount}>{cardObject.clientSat}</span>
         </p>
       </div>
       <div className={style.image_container}>
@@ -77,7 +70,10 @@ const Card = props => {
         <div
           className={style.weight}
           style={
-            clicked && mouseEntered && !mouseLeft && !firstSelect
+            cardObject.clicked
+            && cardObject.mouseEntered
+            && !cardObject.mouseLeft
+            && !cardObject.firstSelect
               ? labelHoverStyle
               : labelStyle
           }
@@ -91,17 +87,10 @@ const Card = props => {
 };
 
 Card.propTypes = {
-  clicked: PropTypes.bool.isRequired,
   handleMouseEnter: PropTypes.func.isRequired,
   handleMouseLeave: PropTypes.func.isRequired,
   handleClick: PropTypes.func.isRequired,
-  mouseEntered: PropTypes.bool.isRequired,
-  mouseLeft: PropTypes.bool.isRequired,
-  firstSelect: PropTypes.bool.isRequired,
-  ingredient: PropTypes.string.isRequired,
-  portions: PropTypes.string.isRequired,
-  mice: PropTypes.string.isRequired,
-  clientSat: PropTypes.string.isRequired,
+  cardObject: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default Card;
