@@ -2,9 +2,3 @@
   display: flex;
   justify-content: center;
 }
-
-@media screen and (min-width: 992px) {
-  .card_container div:last-child {
-    margin-right: 0;
-  }
-}
