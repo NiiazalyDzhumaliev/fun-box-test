@@ -92,44 +92,59 @@ const Card = props => {
   };
 
   return (
-    <div
-      className={`${style.card_item}`}
-      style={styleBorder(cardObject)}
-      onClick={handleClick}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onKeyDown={handleClick}
-      role="button"
-      tabIndex={0}
-    >
-      <div className={style.description_container}>
-        <p className={style.product_description} style={styleTitle(cardObject)}>
-          {setTitle(cardObject)}
-        </p>
-        <h1 className={style.product_name}>Нямушка</h1>
-        <h3 className={style.ingredient}>{cardObject.ingredient}</h3>
-        <p className={style.product_amount}>
-          <span className={style.amount}>{cardObject.portions}</span>
-          {' '}
-          порций
-        </p>
-        <p className={style.product_amount}>
-          <span className={style.amount}>{cardObject.mice}</span>
-          {' '}
-          {miceSpell(cardObject.mice)}
-        </p>
+    <div className={style.card_container}>
+      <div
+        className={`${style.card_item}`}
+        style={styleBorder(cardObject)}
+        onClick={handleClick}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onKeyDown={handleClick}
+        role="button"
+        tabIndex={0}
+      >
+        <div className={style.description_container}>
+          <p
+            className={style.product_description}
+            style={styleTitle(cardObject)}
+          >
+            {setTitle(cardObject)}
+          </p>
+          <h1 className={style.product_name}>Нямушка</h1>
+          <h3 className={style.ingredient}>{cardObject.ingredient}</h3>
+          <p className={style.product_amount}>
+            <span className={style.amount}>{cardObject.portions}</span>
+            {' '}
+            порций
+          </p>
+          <p className={style.product_amount}>
+            <span className={style.amount}>{cardObject.mice}</span>
+            {' '}
+            {miceSpell(cardObject.mice)}
+          </p>
 
-        <p className={style.product_amount}>
-          <span className={style.amount}>{cardObject.clientSat}</span>
-        </p>
-      </div>
-      <div className={style.image_container}>
-        <img src={cat} alt="cat" className={style.cat_image} />
-        <div className={style.weight} style={styleLabel(cardObject)}>
-          <span className={style.weight_amount}>0,5</span>
-          <span className={style.weight_degree}>кг</span>
+          <p className={style.product_amount}>
+            <span className={style.amount}>{cardObject.clientSat}</span>
+          </p>
+        </div>
+        <div className={style.image_container}>
+          <img src={cat} alt="cat" className={style.cat_image} />
+          <div className={style.weight} style={styleLabel(cardObject)}>
+            <span className={style.weight_amount}>0,5</span>
+            <span className={style.weight_degree}>кг</span>
+          </div>
         </div>
       </div>
+      <p className={style.call_to_action}>
+        Чего сидишь? Порадуй котэ,
+        <button
+          type="button"
+          className={style.call_to_action_button}
+          onClick={handleClick}
+        >
+          купи
+        </button>
+      </p>
     </div>
   );
 };

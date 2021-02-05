@@ -1,10 +1,17 @@
+.card_container {
+  display: flex;
+  flex-direction: column;
+  max-width: 270px;
+  padding: 0;
+}
+
 .card_item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
   padding-left: 0;
-  width: 270px;
+  width: 100%;
   height: 400px;
   background-color: white;
   font-family: 'Montserrat', sans-serif;
@@ -16,7 +23,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  .card_item {
+  .card_container {
     margin-right: 50px;
   }
 }
@@ -75,6 +82,7 @@
   position: absolute;
   right: 0;
   margin-bottom: 10px;
+  margin-right: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -94,4 +102,20 @@
 .weight_degree {
   color: white;
   font-weight: bold;
+}
+
+.call_to_action {
+  color: white;
+}
+
+.call_to_action_button {
+  border: none;
+  text-decoration: none;
+  background-color: transparent;
+  color: #339eb5;
+  font-weight: bold;
+}
+
+.call_to_action_button:focus {
+  outline: none;
 }

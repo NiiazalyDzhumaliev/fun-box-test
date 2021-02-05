@@ -11,3 +11,9 @@
   font-weight: 100;
   color: white;
 }
+
+@media screen and (max-width: 576px) {
+  .header_text {
+    font-size: 1.2rem;
+  }
+}
