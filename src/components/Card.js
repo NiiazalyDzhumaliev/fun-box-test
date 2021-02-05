@@ -21,6 +21,18 @@ const Card = props => {
     }
   };
 
+  const setTitle = card => {
+    if (
+      card.clicked
+      && card.mouseEntered
+      && !card.mouseLeft
+      && !card.firstSelect
+    ) {
+      return 'Коте не одобряет?';
+    }
+    return 'Сказочное заморское яство';
+  };
+
   const styleBorder = card => {
     if (
       card.clicked
@@ -67,6 +79,18 @@ const Card = props => {
     return { backgroundColor: '#339eb5' };
   };
 
+  const styleTitle = card => {
+    if (
+      card.clicked
+      && card.mouseEntered
+      && !card.mouseLeft
+      && !card.firstSelect
+    ) {
+      return { color: '#eb367a' };
+    }
+    return { color: 'gray' };
+  };
+
   return (
     <div
       className={`${style.card_item}`}
@@ -79,7 +103,9 @@ const Card = props => {
       tabIndex={0}
     >
       <div className={style.description_container}>
-        <p className={style.product_description}>Сказочное заморское яство</p>
+        <p className={style.product_description} style={styleTitle(cardObject)}>
+          {setTitle(cardObject)}
+        </p>
         <h1 className={style.product_name}>Нямушка</h1>
         <h3 className={style.ingredient}>{cardObject.ingredient}</h3>
         <p className={style.product_amount}>
