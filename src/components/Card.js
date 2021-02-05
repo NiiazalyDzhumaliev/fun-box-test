@@ -8,6 +8,19 @@ const Card = props => {
     handleMouseEnter, handleClick, handleMouseLeave, cardObject,
   } = props;
 
+  const miceSpell = amount => {
+    switch (amount) {
+      case '2': {
+        return 'мыши в подарок';
+      }
+      case '5': {
+        return 'мышей в подарок';
+      }
+      default:
+        return 'мышь в подарок';
+    }
+  };
+
   const borderStyle = cardObject.clicked
     ? { border: '3.5px solid #e81c6a' }
     : { border: '3.5px solid #36b5d1' };
@@ -54,13 +67,9 @@ const Card = props => {
         <p className={style.product_amount}>
           <span className={style.amount}>{cardObject.mice}</span>
           {' '}
-          мышь в подарок
+          {miceSpell(cardObject.mice)}
         </p>
-        <p className={style.product_amount}>
-          <span className={style.amount}>{cardObject.mice}</span>
-          {' '}
-          мышь в подарок
-        </p>
+
         <p className={style.product_amount}>
           <span className={style.amount}>{cardObject.clientSat}</span>
         </p>
