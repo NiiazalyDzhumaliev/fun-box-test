@@ -21,33 +21,47 @@ const Card = props => {
     }
   };
 
-  const borderStyle = cardObject.clicked
-    ? { border: '3.5px solid #e81c6a' }
-    : { border: '3.5px solid #36b5d1' };
-
-  const borderHoverStyle = {
-    border: '3.5px solid #eb367a',
+  const styleBorder = card => {
+    if (
+      card.clicked
+      && card.mouseEntered
+      && !card.mouseLeft
+      && !card.firstSelect
+    ) {
+      return {
+        border: '3.5px solid #eb367a',
+      };
+    }
+    if (card.clicked) {
+      return {
+        border: '3.5px solid #e81c6a',
+      };
+    }
+    return { border: '3.5px solid #36b5d1' };
   };
 
-  const labelHoverStyle = {
-    backgroundColor: '#eb367a',
-  };
+  const styleLabel = card => {
+    if (
+      card.clicked
+      && card.mouseEntered
+      && !card.mouseLeft
+      && !card.firstSelect
+    ) {
+      return {
+        backgroundColor: '#eb367a',
+      };
+    }
 
-  const labelStyle = cardObject.clicked
-    ? { backgroundColor: '#e81c6a' }
-    : { backgroundColor: '#36b5d1' };
+    if (cardObject.clicked) {
+      return { backgroundColor: '#e81c6a' };
+    }
+    return { backgroundColor: '#36b5d1' };
+  };
 
   return (
     <div
       className={`${style.card_item}`}
-      style={
-        cardObject.clicked
-        && cardObject.mouseEntered
-        && !cardObject.mouseLeft
-        && !cardObject.firstSelect
-          ? borderHoverStyle
-          : borderStyle
-      }
+      style={styleBorder(cardObject)}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -76,17 +90,7 @@ const Card = props => {
       </div>
       <div className={style.image_container}>
         <img src={cat} alt="cat" className={style.cat_image} />
-        <div
-          className={style.weight}
-          style={
-            cardObject.clicked
-            && cardObject.mouseEntered
-            && !cardObject.mouseLeft
-            && !cardObject.firstSelect
-              ? labelHoverStyle
-              : labelStyle
-          }
-        >
+        <div className={style.weight} style={styleLabel(cardObject)}>
           <span className={style.weight_amount}>0,5</span>
           <span className={style.weight_degree}>кг</span>
         </div>
