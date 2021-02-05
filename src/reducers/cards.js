@@ -55,7 +55,7 @@ const reducer = (state = initialState, action) => {
             const updItem = {
               ...item,
               clicked: !item.clicked,
-              firstSelect: !item.firstSelect,
+              firstSelect: !item.clicked,
             };
             return updItem;
           }
