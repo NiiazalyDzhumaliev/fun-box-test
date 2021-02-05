@@ -33,6 +33,13 @@ const Card = props => {
     return 'Сказочное заморское яство';
   };
 
+  const setActionText = card => {
+    if (card.clicked) {
+      return card.description;
+    }
+    return 'Чего сидишь? Порадуй котэ,';
+  };
+
   const styleBorder = card => {
     if (
       card.clicked
@@ -136,11 +143,16 @@ const Card = props => {
         </div>
       </div>
       <p className={style.call_to_action}>
-        Чего сидишь? Порадуй котэ,
+        {setActionText(cardObject)}
         <button
           type="button"
           className={style.call_to_action_button}
           onClick={handleClick}
+          style={
+            cardObject.clicked
+              ? { display: 'none' }
+              : { display: 'inline-block' }
+          }
         >
           купи
         </button>
