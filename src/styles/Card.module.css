@@ -3,6 +3,13 @@
   flex-direction: column;
   max-width: 270px;
   padding: 0;
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 576px) {
+  .card_container {
+    margin-right: 0;
+  }
 }
 
 .card_item {
@@ -20,12 +27,6 @@
 
 .card_item:focus {
   outline: none;
-}
-
-@media screen and (min-width: 992px) {
-  .card_container {
-    margin-right: 50px;
-  }
 }
 
 .description_container {
