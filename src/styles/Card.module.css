@@ -70,6 +70,7 @@
   width: 170px;
   height: 210px;
   object-fit: cover;
+  border-bottom-left-radius: 5px;
 }
 
 .image_container {
@@ -106,6 +107,7 @@
 }
 
 .call_to_action {
+  margin: 0;
   color: white;
   font-size: 0.65rem;
   align-self: center;
@@ -121,5 +123,25 @@
 }
 
 .call_to_action_button:focus {
+  outline: none;
+}
+
+.toggle_switch {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.make_available_btn {
+  border: none;
+  text-decoration: none;
+  background-color: transparent;
+  color: #339eb5;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.make_available_btn:focus {
   outline: none;
 }

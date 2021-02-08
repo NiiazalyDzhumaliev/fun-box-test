@@ -5,7 +5,11 @@ import style from '../styles/Card.module.css';
 
 const Card = props => {
   const {
-    handleMouseEnter, handleClick, handleMouseLeave, cardObject,
+    handleMouseEnter,
+    handleClick,
+    handleMouseLeave,
+    handleCheckbox,
+    cardObject,
   } = props;
 
   const miceSpell = amount => {
@@ -22,6 +26,9 @@ const Card = props => {
   };
 
   const setTitle = card => {
+    if (card.isChecked) {
+      return 'Сказочное заморское яство';
+    }
     if (
       card.clicked
       && card.mouseEntered
@@ -34,6 +41,9 @@ const Card = props => {
   };
 
   const setActionText = card => {
+    if (card.isChecked) {
+      return card.notInStock;
+    }
     if (card.clicked) {
       return card.description;
     }
@@ -41,6 +51,9 @@ const Card = props => {
   };
 
   const styleBorder = card => {
+    if (card.isChecked) {
+      return { border: '3.5px solid gray' };
+    }
     if (
       card.clicked
       && card.mouseEntered
@@ -61,10 +74,17 @@ const Card = props => {
         border: '3.5px solid #36b5d1',
       };
     }
+
     return { border: '3.5px solid #339eb5' };
   };
 
   const styleLabel = card => {
+    if (card.isChecked) {
+      return {
+        backgroundColor: 'gray',
+        opacity: '0.5',
+      };
+    }
     if (
       card.clicked
       && card.mouseEntered
@@ -87,6 +107,9 @@ const Card = props => {
   };
 
   const styleTitle = card => {
+    if (card.isChecked) {
+      return { color: 'gray' };
+    }
     if (
       card.clicked
       && card.mouseEntered
@@ -96,6 +119,29 @@ const Card = props => {
       return { color: '#eb367a' };
     }
     return { color: 'gray' };
+  };
+
+  const styleImage = card => {
+    if (card.isChecked) {
+      return {
+        filter: 'opacity(50%)',
+      };
+    }
+    return { filter: 'opacity(100%)' };
+  };
+
+  const disableText = card => {
+    if (card.isChecked) {
+      return { color: 'gray' };
+    }
+    return { color: 'black' };
+  };
+
+  const removeBuyBtn = card => {
+    if (card.isChecked || card.clicked) {
+      return { display: 'none' };
+    }
+    return { display: 'inline-block' };
   };
 
   return (
@@ -117,8 +163,12 @@ const Card = props => {
           >
             {setTitle(cardObject)}
           </p>
-          <h1 className={style.product_name}>Нямушка</h1>
-          <h3 className={style.ingredient}>{cardObject.ingredient}</h3>
+          <h1 className={style.product_name} style={disableText(cardObject)}>
+            Нямушка
+          </h1>
+          <h3 className={style.ingredient} style={disableText(cardObject)}>
+            {cardObject.ingredient}
+          </h3>
           <p className={style.product_amount}>
             <span className={style.amount}>{cardObject.portions}</span>
             {' '}
@@ -135,7 +185,12 @@ const Card = props => {
           </p>
         </div>
         <div className={style.image_container}>
-          <img src={cat} alt="cat" className={style.cat_image} />
+          <img
+            src={cat}
+            alt="cat"
+            className={style.cat_image}
+            style={styleImage(cardObject)}
+          />
           <div className={style.weight} style={styleLabel(cardObject)}>
             <span className={style.weight_amount}>0,5</span>
             <span className={style.weight_degree}>кг</span>
@@ -148,15 +203,20 @@ const Card = props => {
           type="button"
           className={style.call_to_action_button}
           onClick={handleClick}
-          style={
-            cardObject.clicked
-              ? { display: 'none' }
-              : { display: 'inline-block' }
-          }
+          style={removeBuyBtn(cardObject)}
         >
           купи
         </button>
       </p>
+      <div className={style.toggle_switch}>
+        <button
+          type="button"
+          onClick={handleCheckbox}
+          className={style.make_available_btn}
+        >
+          {cardObject.isChecked ? 'Сделать доступным' : 'Сделать недоступным'}
+        </button>
+      </div>
     </div>
   );
 };
@@ -165,6 +225,7 @@ Card.propTypes = {
   handleMouseEnter: PropTypes.func.isRequired,
   handleMouseLeave: PropTypes.func.isRequired,
   handleClick: PropTypes.func.isRequired,
+  handleCheckbox: PropTypes.func.isRequired,
   cardObject: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 

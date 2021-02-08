@@ -12,3 +12,8 @@ export const ON_LEAVE_CARD = cardId => ({
   type: 'ON_LEAVE_CARD',
   cardId,
 });
+
+export const ON_CHECKED = cardId => ({
+  type: 'ON_CHECKED',
+  cardId,
+});
