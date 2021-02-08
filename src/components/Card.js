@@ -52,7 +52,9 @@ const Card = props => {
 
   const styleBorder = card => {
     if (card.isChecked) {
-      return { border: '3.5px solid gray' };
+      return {
+        border: '3.5px solid gray',
+      };
     }
     if (
       card.clicked
