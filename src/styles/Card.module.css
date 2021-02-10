@@ -4,16 +4,17 @@
   position: relative;
   max-width: 270px;
   padding: 0;
-  clip-path: polygon(
-    0 9%,
-    16% 0,
-    100% 0,
-    100% 5%,
-    100% 100%,
-    100% 100%,
-    5% 100%,
-    0 100%
-  );
+  clip-path:
+    polygon(
+      0 9%,
+      16% 0,
+      100% 0,
+      100% 5%,
+      100% 100%,
+      100% 100%,
+      5% 100%,
+      0 100%
+    );
 }
 
 @media screen and (max-width: 540px) {
