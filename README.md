@@ -23,7 +23,7 @@ Additional description about the project and its features.
 
 ## Video Presentation
 
-[Live Demo](https://www.loom.com/share/4b7072f71fdd4156a288c9618f8a0376)
+[Video](https://www.loom.com/share/4b7072f71fdd4156a288c9618f8a0376)
 
 ## Getting Started
 
