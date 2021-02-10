@@ -21,6 +21,10 @@ Additional description about the project and its features.
 
 [Live Demo](https://jovial-snyder-db3ed4.netlify.app/)
 
+## Video Presentation
+
+[Live Demo](https://www.loom.com/share/4b7072f71fdd4156a288c9618f8a0376)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
