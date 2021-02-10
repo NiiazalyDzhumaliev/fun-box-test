@@ -148,6 +148,7 @@ const Card = props => {
 
   return (
     <div className={style.card_container}>
+      <div className={style.corner} style={styleBorder(cardObject)} />
       <div
         className={`${style.card_item}`}
         style={styleBorder(cardObject)}
@@ -194,7 +195,7 @@ const Card = props => {
             style={styleImage(cardObject)}
           />
           <div className={style.weight} style={styleLabel(cardObject)}>
-            <span className={style.weight_amount}>0,5</span>
+            <span className={style.weight_amount}>{cardObject.weight}</span>
             <span className={style.weight_degree}>кг</span>
           </div>
         </div>
