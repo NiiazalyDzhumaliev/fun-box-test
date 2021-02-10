@@ -6,7 +6,7 @@ A single page app using React and Redux
 
 Additional description about the project and its features.
 
-![BookStore](public/Screenshot.png)
+![BookStore](public/Screenshot_1.png)
 
 ## Built With
 
